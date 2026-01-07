@@ -27,13 +27,17 @@
 지각/결석 처리되지 않도록 금일 내에 출석을 진행해 주세요.  
 
 [ 데이터베이스 설계 ]  
-| 필드            | 설명            |
-| --------------- | --------------- |
-| notification_id | PK              |
-| user_id         | 사용자          |
-| class_id        | 수업            |
-| type            | 30MIN / 10MIN   |
-| sent_at         | 발송 시간       |
+| 필드명          | 타입(예시)  | 설명                       |
+| --------------- | ----------- | --------------------------- |
+| notification_id | BIGINT (PK) | 알림 고유 ID                |
+| user_id         | BIGINT (FK) | 사용자 ID                   |
+| class_id        | BIGINT (FK) | 수업 ID                     |
+| type            | VARCHAR     | 알림 타입 (`ATTENDANCE_5H`) |
+| scheduled_for   | DATETIME    | 알림 기준 시각 (마감 - 5)   |
+| sent_at         | DATETIME    | 실제 발송 시각              |
+| status          | VARCHAR     | `SUCCESS` / `FAILED`        |
+| created_at      | DATETIME    | 생성 시각                   |
+
 
 ---
 
