@@ -22,3 +22,17 @@ cron + Python
 - Firebase FCM
 
 ----
+
+서버 구성  
+- Ubuntu / Rocky Linux
+- Nginx
+- API 서버(Docker 활용)
+
+핵심 - 사용자별 로그 관리, 알림 발송 로그, 서버 재부팅 후 자동 실행 << 중요  
+
+< 백엔드/풀스택 >  
+- 사용자 / 수업 / 출석 DB 설계
+- 출석 여부 API
+- 알림 요청 API
+- 알림 기록 조회 API
+- 간단한 웹 UI  
